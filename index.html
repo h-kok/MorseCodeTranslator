@@ -9,13 +9,38 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <h1>Morse Code Translator</h1>
-        <p>Instructions on how to use translator.</p>
-        <form action="">
-            <label for="input">Type your text here: </label>
-            <input type="text" id="input" name="input" class="input" required />
-            <button>Submit</button>
-        </form>
-        <div class="output"></div>
+        <div class="container">
+            <h1 class="header">Morse Code Translator</h1>
+            <p class="para">Instructions</p>
+            <p class="para">
+                1. Start typing your text in the corresponding box.
+            </p>
+            <p class="para">
+                2. In the case of morse code, remember to add a space after each
+                letter and a "/" followed by a space between each word. This
+                translator takes dots: "." and dashes: "-".
+            </p>
+
+            <form action="submit" class="form">
+                <label for="input" class="form__label"
+                    >English to Morse:
+                </label>
+                <input
+                    type="text"
+                    id="input"
+                    name="input"
+                    class="form__input"
+                    placeholder="Type your text here"
+                    required
+                />
+                <button class="form__btn">Translate</button>
+            </form>
+            <div class="output"></div>
+            <p class="para">
+                The following English characters are accepted: all letters from
+                A to Z (case insensitive), numbers from 0 to 9 and the following
+                punctuation:
+            </p>
+        </div>
     </body>
 </html>
