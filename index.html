@@ -7,40 +7,68 @@
         <title>Morse Code Translator</title>
         <script type="module" src="./Javascript/script.js" defer></script>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-        <div class="container">
-            <h1 class="header">Morse Code Translator</h1>
-            <p class="para">Instructions</p>
-            <p class="para">
-                1. Start typing your text in the corresponding box.
+        <h1 class="header">Morse Code Translator</h1>
+        <section class="instructions">
+            <p class="instructions__para instructions__para--underline">
+                Instructions
             </p>
-            <p class="para">
-                2. In the case of morse code, remember to add a space after each
-                letter and a "/" followed by a space between each word. This
+            <p class="instructions__para">
+                1. Start typing your English or morse code text in the box
+                below.
+            </p>
+            <p class="instructions__para">
+                2. In the case of morse code, add a space after each character
+                and a "/ " followed by a space between each word. This
                 translator takes dots: "." and dashes: "-".
             </p>
-
-            <form action="submit" class="form">
-                <label for="input" class="form__label"
-                    >English to Morse:
-                </label>
-                <input
-                    type="text"
-                    id="input"
+        </section>
+        <section class="translator">
+            <div class="translator__wrapper">
+                <h3 class="translator__heading">Translate Text</h3>
+                <textarea
+                    class="translator__textarea"
                     name="input"
-                    class="form__input"
-                    placeholder="Type your text here"
-                    required
-                />
-                <button class="form__btn">Translate</button>
-            </form>
-            <div class="output"></div>
-            <p class="para">
-                The following English characters are accepted: all letters from
-                A to Z (case insensitive), numbers from 0 to 9 and the following
-                punctuation:
+                    id="input"
+                    cols="55"
+                    rows="10"
+                    placeholder="Begin typing text"
+                ></textarea>
+            </div>
+            <div class="translator__wrapper">
+                <h3 class="translator__heading">Translation</h3>
+                <textarea
+                    class="translator__textarea"
+                    name="output"
+                    id="output"
+                    cols="55"
+                    rows="10"
+                    placeholder="Translation appears here"
+                    disabled
+                ></textarea>
+            </div>
+        </section>
+        <div class="error-msg"></div>
+        <section class="valid-inputs">
+            <p class="valid-inputs__para">
+                The following English characters are accepted:
             </p>
-        </div>
+            <ul class="valid-inputs__list">
+                <li class="valid-inputs__list">
+                    Letters: A - Z (case insensitive)
+                </li>
+                <li class="valid-inputs__list">Numbers: 0 - 9</li>
+                <li class="valid-inputs__list">
+                    Punctuation: . , ? ; : - _ / ' " ! @ $ & ( ) + =
+                </li>
+            </ul>
+        </section>
     </body>
 </html>
