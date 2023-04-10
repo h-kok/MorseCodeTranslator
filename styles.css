@@ -1,0 +1,47 @@
+* {
+  margin: 5px;
+  padding: 10px;
+  font-family: "Kanit", sans-serif;
+  border-radius: 5px;
+}
+
+body {
+  width: 80vw;
+  margin: auto;
+  background-color: rgb(222, 245, 229);
+}
+
+.header {
+  text-align: center;
+  background-color: rgb(158, 213, 197);
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(188, 234, 213);
+}
+.instructions__para--underline {
+  text-decoration: underline;
+}
+
+.translator {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(158, 213, 197);
+}
+.translator__textarea {
+  border-radius: 5px;
+  background-color: rgb(222, 245, 229);
+}
+
+.error-msg {
+  background-color: rgb(188, 234, 213);
+}
+
+.valid-inputs {
+  background-color: rgb(158, 213, 197);
+}
+.valid-inputs__list {
+  padding-left: 20px;
+}
