@@ -58,3 +58,7 @@ export const morseToEng = (userInput) => {
 //     Object.keys(englishToMorse).includes(char)
 // );
 // console.log(input[indexCharNotValid]);
+
+//Working solultion
+//check if all chars in array are valid, if yes, return join
+//if no, map through array and change each invalid char to #
