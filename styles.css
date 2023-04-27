@@ -1,7 +1,7 @@
 * {
   margin: 5px;
   padding: 10px;
-  font-family: "Kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   border-radius: 5px;
 }
 
@@ -28,11 +28,14 @@ body {
 .translator {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   background-color: rgb(158, 213, 197);
 }
 .translator__textarea {
   border-radius: 5px;
   background-color: rgb(222, 245, 229);
+  max-width: 400px;
+  font-size: large;
 }
 
 .error-msg {

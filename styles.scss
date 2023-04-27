@@ -1,25 +1,28 @@
+$primary-colour: rgb(158, 213, 197);
+$secondary-colour: rgb(188, 234, 213);
+$tertiary-colour: rgb(222, 245, 229);
 * {
     margin: 5px;
     padding: 10px;
-    font-family: "Kanit", sans-serif;
+    font-family: "Roboto", sans-serif;
     border-radius: 5px;
 }
 
 body {
     width: 80vw;
     margin: auto;
-    background-color: rgb(222, 245, 229);
+    background-color: $tertiary-colour;
 }
 
 .header {
     text-align: center;
-    background-color: rgb(158, 213, 197);
+    background-color: $primary-colour;
 }
 
 .instructions {
     display: flex;
     flex-direction: column;
-    background-color: rgb(188, 234, 213);
+    background-color: $secondary-colour;
     &__para {
         &--underline {
             text-decoration: underline;
@@ -30,19 +33,22 @@ body {
 .translator {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(158, 213, 197);
+    flex-wrap: wrap;
+    background-color: $primary-colour;
     &__textarea {
         border-radius: 5px;
-        background-color: rgb(222, 245, 229);
+        background-color: $tertiary-colour;
+        max-width: 400px;
+        font-size: large;
     }
 }
 
 .error-msg {
-    background-color: rgb(188, 234, 213);
+    background-color: $secondary-colour;
 }
 
 .valid-inputs {
-    background-color: rgb(158, 213, 197);
+    background-color: $primary-colour;
     &__list {
         padding-left: 20px;
     }
