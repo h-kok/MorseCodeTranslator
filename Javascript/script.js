@@ -3,6 +3,7 @@ import { engToMorse, morseToEng } from "./translation.js";
 const input = document.querySelector("#input");
 const output = document.querySelector("#output");
 const errorMsg = document.querySelector(".error-msg");
+const messageContainer = document.querySelector(".message-para");
 
 input.addEventListener("input", () => {
     const text = input.value;
@@ -13,19 +14,25 @@ input.addEventListener("input", () => {
         : (output.textContent = morseToEng(text));
 
     const outputTxt = output.textContent;
-    const indexHash = text.length - 1;
 
     const messagePara = document.createElement("p");
     messagePara.className = "message-para";
-    const message = document.createTextNode(
-        `The following character: ${text.charAt(indexHash)} is not accepted.`
-    );
-    messagePara.appendChild(message);
-    if (outputTxt.includes("#")) {
-        errorMsg.appendChild(messagePara);
-    }
-    if (!outputTxt.includes("#")) {
+
+    if (!text.includes("#") && errorMsg.hasChildNodes()) {
         errorMsg.removeChild(document.querySelector(".message-para"));
+    }
+
+    try {
+        if (outputTxt.includes("#")) throw "#";
+    } catch (err) {
+        if (errorMsg.hasChildNodes()) {
+            errorMsg.removeChild(messageContainer);
+        }
+        const message = document.createTextNode(
+            `The character at ${err} is not valid`
+        );
+        errorMsg.appendChild(messagePara);
+        messagePara.appendChild(message);
     }
 });
 
