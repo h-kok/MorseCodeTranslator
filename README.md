@@ -2,7 +2,7 @@
 
 ## Demo & Snippets
 
--   You can view the live version here: 'insert link'.
+-   You can view the live version here: https://h-kok.github.io/MorseCodeTranslator/.
 
 ## Requirements / Purpose
 
@@ -32,21 +32,26 @@ npm run test
 
 ## Future Goals
 
--   Feedback recieved:
+-   Feedback recieved 13/4/23:
     -   Increase font size or change font to improve readability.
     -   Make page responsive.
     -   Create develop branch for current project with bugs. Create main branch with working version of translator (add more simple error message handling.)
--   Change colour theme.
 
 ---
 
 ## Change logs
 
-### 26/04/23 - {Theme of changes if applicable}
+### 26/04/23
 
 -   This project was submitted on 11/04/23.
 -   Updated README detailing known issues, and future goals, plans for reimplementation.
 -   Create develop branch on github.
+
+### 27/04/23
+
+-   Made translation section responsive.
+-   Increase font size in text area.
+-   Refactor JS and add try/catch block to show error message if translation contains invalid character, which has been replaced with "#".
 
 ---
 
